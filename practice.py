@@ -162,27 +162,47 @@ if __name__ == "__main__":
 ################
 
 # Why are dictionaries necessary? Why not use a list?
-#you can use a key value pair in dictionaries, and you can make sure that each key is unique using dictionaries unlike lists.
+#you can use a key value pair in dictionaries, and you can make sure that each key is unique using dictionaries unlike lists. lookup time is fast.
 
 # How is the lookup time in a dictionary different from that of a list?
+#lookup time in a dictionary is faster because you're looking for something specific rather than rifling through all the cards until you match the term and the query
 
 # How do you create an empty dictionary? How do you create a dictionary with initial content?
+# animals = {} for an empty dictionary
+#     animals = {'goat': 6, 'pony': 1, 'duck': 14} for a populated dictionary
 
 # How do you add a new key/value pair to a dictionary? How do you update the value of a key in a dictionary?
+#using the example above:
+#animals['rabbit'] = 2 for net new
+#animals['pony'] = 2 for updating pony's value to 2.
+#so they're basically the same; just for one the key is already in the dictionary and for the other, it is not.
 
 # How do you remove a key/value pair from a dictionary?
+# del animals['rabbit']
 
 # How do you look up the value for a given key in a dictionary?
+# animals['duck'] when animals in the dictionary name and duck is the key name. it will return 14 where 14 is the value.
 
 # How do you iterate over a dictionary?
+# if you want to get keys
+# # for animal in animals:
+# #     print(animal)
+# if you want to get values
+# for animal in animals:
+#     print(animals[animal])
 
 # Print keys?
-
+#see above
 # Print values?
-
+#see above
 # Print keys and values?
+# animals.items()
+# or
+# for animal, number in animals.items():
+#     print(f'{animal}: {number}')
 
 # What is a KeyError? When does one occur?
+# attemptin to index into a dictionary with a nonexistant key results in a keyerror
 
 # Dictionary methods to know:
 
