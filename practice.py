@@ -207,14 +207,24 @@ if __name__ == "__main__":
 # Dictionary methods to know:
 
 # .get()
+#return the value for a key if the key is in the dictionary.
+#if the key is not in the dictionary: returns default.
+#if a default is not specified, it returns None so that a KeyError is not raised.
+# #animals.get('porcupine',0)
+# returns 0 because there were not porcupines in the dictionary
 
 # .values()
+#returns the values in a dictionary
+#e.g. animals.values() could return dict_values([6,1,14]) if those are the values in the dictionary
 
 # .items()
+#as we discussed about 20 lines up from here, it will return the key value pairs in a dictionary.
 
 # How do you access a dictionary within a dictionary?
+# animals['pony']['bites'] if pony is the key in animals and bites is akey within pony.
 
 # When should you use a dictionary?
+#for key uniqueness, for ease of searching by term, for counting
 
 ################
 # Python Tools
