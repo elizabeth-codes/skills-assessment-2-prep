@@ -231,32 +231,50 @@ if __name__ == "__main__":
 ################
 
 # What are some characteristics of Python as compared to other programming languages?
+#it is strongly-typed, dynamic and high leve.
+#strongly-typed: the value doesn't change. Dynamic: able to create new data and occupy more memory as the program runs rather than compiling
+#high level: allows us to abstract and use English-like syntax.
 
 # What are .pyc files? What is their purpose?
+#some file that forms when python is compiled?? I don't really understand what their purpose is. just so that you don't have to compile again if its already compiled?
 
 # What’s the difference between the commands python3 mygame.py and python3 -i mygame.py?
+#python3 just runs it in the terminal as per usual and prints/returns any results as prescribed by the program after running it
+#-i opens up interactive mode so it runs python and your code and returns you to th epython console, with all functions still defined and all variables still in memory
 
 # Built-in Python functions to know:
 
 # dir()
+#show me the methods and attributes of this object.
 
 # help()
+#show me documentation about how to use this object.
 
 # Why does code style matter?
+#>Well styled code is easier to read, has fewer bugs and helps you do better on interviews.
 
 # Key points of Python style to know
+#They are listed below.
 
 # Tabs vs. Spaces
+#spaces are preferred, usually 4, don't mix n match.
 
 # Line length and how to break lines for readability
+#lines should be no more than 79 characters. you can always add line breaks in braces, brackets, parentheses
 
 # Where to put whitespace
+#around operators, divide paragraphs, put 2 blank lines between functions.
 
 # Variable name style
+#should use snake case, should be verby, should tell what something is for; use plural nouns for collections, singular nouns for everything else
+#Use singular version of collections' names in for-loops (for fruit in fruits:)
 
 # Docstrings and comments
+#Docstrings: use """triple quotes""". shouldn't run more than one line; tell you when and why to use a function, written for users of the function
+#Comments tell you how it works on the inside and are for maintainers of your function
 
 # What is sys.argv? What happens if you print it out?
+#I don't really understand tbh. something about command line arguments. you can pass them in and then user more files rather than just hard coding one.
 
 ################
 # Markov Chains
