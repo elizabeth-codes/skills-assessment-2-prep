@@ -281,8 +281,13 @@ if __name__ == "__main__":
 ################
 
 # In the context of Markov chains, what is a bigram? What’s an n-gram?
+#bigram - two word phrases (In this case, the keys to our dictionary. over line breaks as well as in a single line.)
+#n-gram: sequence of n words; constructed from text and can be thought of as  links in a chain
 
 # How could you use dictionaries to structure a bigram markov chain implementation?
+#create a dictionary in which the key is bigrams from the actual text and the values are the words that come after each bigram.
+#Choose a random bigram to start.
+#choose a random key to continue. now look at the final bigram, treat that as a key and choose a value to extend the line. repeat.
 
 ################
 # Shell
