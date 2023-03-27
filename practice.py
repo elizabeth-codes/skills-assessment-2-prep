@@ -41,8 +41,15 @@ def without_duplicates(words):
         >>> type(without_duplicates([111111, 2, 33333, 2]))
         <class 'list'>
     """
+    no_duplicates = {}
+    no_duplicates_list = []
 
-    return []
+    for word in words:
+        no_duplicates[word] = 1
+
+    for no_duplicate in no_duplicates:
+        no_duplicates_list.append(no_duplicate)
+    return no_duplicates_list
 
 
 def find_unique_common_items(items1, items2):
@@ -296,20 +303,27 @@ if __name__ == "__main__":
 # VS Code shortcuts to know and use:
 
 # CTRL-/ to comment/uncomment
+#On my pink keyboard, its [option/win] key + / to comment
 
 # CTRL-] and CTRL-[ to indent/dedent (or tab and shift + tab)
+#duly noted0
 
 # Shell shortcuts and commands to know and use:
 
 # Tab completion
+#I use it already
 
 # Up arrow/Down arrow to navigate history
+#I use it already
 
 # CTRL-A to go to beginning of line
+#This is actually ctrl on my pink keyboard....
 
 # CTRL-E to go to end of line
+#This is actually ctrl on my pink keyboard....
 
 # CTRL-D to delete moving forward
+#duly noted.
 
 # head <some file name>
 
