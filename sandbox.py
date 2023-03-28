@@ -34,16 +34,19 @@ def top_chars(phrase):
         else:
             non_duplicated_letters[letter] += 1
 
-    values = non_duplicated_letters.values()
-    print(values)
-    # largest_value = values[0]
-    # for value in values:
-    #     if value > largest_value:
-    #         largest_value = value
+    largest_value = 0
+    for value in non_duplicated_letters.values():
+        if value > largest_value:
+            largest_value = value
+    print(largest_value)
 
-    # print([non_duplicated_letters.values().index(largest_value)])
+    most_frequent_letters = []
+    for key, value1 in non_duplicated_letters.items():
+        if value1 == largest_value:
+            most_frequent_letters.append(key)
+    return sorted(most_frequent_letters)
 
-    return non_duplicated_letters
+    # return non_duplicated_letters
 
 
 print(top_chars(phrase))

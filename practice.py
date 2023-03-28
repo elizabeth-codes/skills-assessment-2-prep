@@ -84,8 +84,10 @@ def find_unique_common_items(items1, items2):
         >>> sorted(find_unique_common_items(["2", "1", 2], [2, 1]))
         [2]
     """
+    items11 = set(items1)
+    items22 = set(items2)
 
-    return set()
+    return items11 & items22
 
 
 def get_sum_zero_pairs(numbers):
@@ -142,8 +144,25 @@ def top_chars(phrase):
     Do not count spaces, but count all other characters.
 
     """
+    non_duplicated_letters = {}
+    for letter in phrase:
+        if letter == ' ':
+            continue
+        if letter not in non_duplicated_letters:
+            non_duplicated_letters[letter] = 1
+        else:
+            non_duplicated_letters[letter] += 1
 
-    return []
+    largest_count = 0
+    for count in non_duplicated_letters.values():
+        if count > largest_count:
+            largest_count = count
+
+    most_frequent_letters = []
+    for character, count in non_duplicated_letters.items():
+        if count == largest_count:
+            most_frequent_letters.append(character)
+    return sorted(most_frequent_letters)
 
 
 #####################################################################
