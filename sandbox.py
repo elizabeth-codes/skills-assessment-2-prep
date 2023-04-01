@@ -1,52 +1,26 @@
-phrase = "The rain in spain stays mainly in the plain."
+def get_sum_zero_pairs(numbers):
+    """Given list of numbers, return list of pairs summing to 0.
 
-
-def top_chars(phrase):
-    """Find most common character(s) in string.
-
-    Given an input string, return a list of character(s) which
-    appear(s) the most in the input string.
-
-    If there is a tie, the order of the characters in the returned
-    list should be alphabetical.
+    Given a list of numbers, add up each individual pair of numbers.
+    Return a list of each pair of numbers that adds up to 0.
 
     For example:
 
-        >>> top_chars("The rain in spain stays mainly in the plain.")
-        ['i', 'n']
+        >>> sort_pairs( get_sum_zero_pairs([1, 2, 3, -2, -1]) )
+        [[-2, 2], [-1, 1]]
 
-    If there is not a tie, simply return a list with one item.
+        >>> sort_pairs( get_sum_zero_pairs([3, -3, 2, 1, -2, -1]) )
+        [[-3, 3], [-2, 2], [-1, 1]]
 
-    For example:
+    This should always be a unique list, even if there are
+    duplicates in the input list:
 
-        >>> top_chars("Shake it off, shake it off.")
-        ['f']
+        >>> sort_pairs( get_sum_zero_pairs([1, 2, 3, -2, -1, 1, 1]) )
+        [[-2, 2], [-1, 1]]
 
-    Do not count spaces, but count all other characters.
+    Of course, if there are one or more zeros to pair together,
+    that's fine, too (even a single zero can pair with itself):
 
+        >>> sort_pairs( get_sum_zero_pairs([1, 3, -1, 1, 1, 0]) )
+        [[-1, 1], [0, 0]]
     """
-    non_duplicated_letters = {}
-    for letter in phrase:
-        if letter == ' ':
-            continue
-        if letter not in non_duplicated_letters:
-            non_duplicated_letters[letter] = 1
-        else:
-            non_duplicated_letters[letter] += 1
-
-    largest_value = 0
-    for value in non_duplicated_letters.values():
-        if value > largest_value:
-            largest_value = value
-    print(largest_value)
-
-    most_frequent_letters = []
-    for key, value1 in non_duplicated_letters.items():
-        if value1 == largest_value:
-            most_frequent_letters.append(key)
-    return sorted(most_frequent_letters)
-
-    # return non_duplicated_letters
-
-
-print(top_chars(phrase))
