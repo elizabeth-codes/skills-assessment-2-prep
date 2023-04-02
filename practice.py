@@ -117,7 +117,16 @@ def get_sum_zero_pairs(numbers):
         [[-1, 1], [0, 0]]
     """
 
-    return []
+    numbers = {}
+    pairs = []
+    for number in numbers:
+        numbers[number] = 1
+
+    for item in numbers:
+        if (item * -1) in numbers:
+            pairs.append([item, (item * -1)])
+
+    return pairs
 
 
 def top_chars(phrase):
