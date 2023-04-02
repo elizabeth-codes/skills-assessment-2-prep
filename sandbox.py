@@ -24,3 +24,18 @@ def get_sum_zero_pairs(numbers):
         >>> sort_pairs( get_sum_zero_pairs([1, 3, -1, 1, 1, 0]) )
         [[-1, 1], [0, 0]]
     """
+
+    numbers = {}
+    pairs = []
+    for number in listy:
+        numbers[number] = 1
+
+    for item in listy:
+        if (item * -1) in numbers:
+            pairs.append([item, (item * -1)])
+
+    return pairs
+
+
+listy = [1, 2, 3, -2, -1]
+print(get_sum_zero_pairs(listy))
